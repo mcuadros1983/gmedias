@@ -1,0 +1,27 @@
+<div class='table-responsive'>
+    <table class='table table-dark' style="text-align: center;">
+        <thead>
+            <tr>
+                <th>COD. BARRA</th>
+                <th>COD. MEDIA</th>
+                <th>KG</th>
+                <th>TROPA</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each medias}}
+            <tr>
+                <td>{{{barcode}}}</td>
+                <td>{{{mediacode}}}</td>
+                <td>{{{kg}}}</td>
+                <td>{{{troop}}}</td>
+                <td onClick="return deleteItem({{{mediacode}}})"><i class="bi bi-trash3"></i></td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+
+    </table>
+
+</div>

@@ -1,0 +1,19 @@
+	1. Instalacion de dependencias
+- express (crear servidor)
+- connect-flash (enviar mensaje entre vistas, que se pueden guardar en cookies o session)
+- bcryptjs (encripta textos)
+- express-handlebars (crear vistas)
+- express-sessions (guardar datos desde la memoria del servidor)
+- method-override (enviar peticiones put o delete desde formularios)
+- mongoose (permite manejar la base de datos de mongoDb)
+- passport (permite autenticar al usuario) / puede trabajar con cualquier red social o conalguna base de datos par alo cual se necesita la siguietne dependencia
+- passport-local
+- dotenv (variabentornorno)
+
+2. Establecer variables de configuracion de la conexion al servidor en config.js
+3. Establecer la conexion al sevidor en database.js
+4. Requerir modulos (especialmenet el de express) y definir el esquema de app.js
+5. Requerir la conexion a la base de datos y a app.js para iniciar el servidor  en index.js
+6. Modelado de datos para mongoose en carpeta models
+7. Establecer la estructura de las rutas en la carpeta routes
+8. Establecer las respuestas a las rutas en la carpeta controllers

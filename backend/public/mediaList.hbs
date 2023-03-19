@@ -1,0 +1,43 @@
+{{#if medias}}
+<div class='table-responsive'>
+    <table class='table table-dark' style="text-align: center;">
+        <thead>
+            <tr>
+                <th>COD. BARRA</th>
+                <th>COD. MEDIA</th>
+                <th>KG</th>
+                <th>TROPA</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each medias}}
+            <tr>
+                <td>{{{barcode}}}</td>
+                <td>{{{mediacode}}}</td>
+                <td>{{{kg}}}</td>
+                <td>{{{troop}}}</td>
+                <td onClick="return deleteItem({{{mediacode}}})"><i class="bi bi-trash3"></i></td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+
+    </table>
+    <br>
+
+
+</div>
+{{!-- <table id="mediasContainer" class="table table-dark" style="text-align: center;"></table> --}}
+
+<div class="row align-items-center justify-content-center">
+    {{!-- <form action="/media/media-new" method="POST"> --}}
+        <div class="col-auto">
+            <button onClick="return mediasSaved()" type="button" class="btn btn-secondary btn-lg">Grabar</button>
+        </div>
+    {{!-- </form> --}}
+</div>
+
+{{else}}
+<div class='alert alert-danger'>No se han cargado medias</div>
+{{/if}}
